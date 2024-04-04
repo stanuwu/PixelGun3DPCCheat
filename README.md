@@ -18,6 +18,7 @@ It will always be available for free, with the source code included. All feature
 - ESP
 - NoMotionBlur
 - AutoHeal
+- UberCharge (Instant charging for charged weapons)
 - CoinGenerator
 - DropTeleport
 - GemGenerator
