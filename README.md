@@ -14,6 +14,12 @@ It will always be available for free, with the source code included. All feature
 > [<img src="https://raw.githubusercontent.com/aha999/DonateButtons/master/Paypal.png" width="250">](https://www.paypal.com/ncp/payment/M3V7Q3Q295AHW)
 >
 > [<img src="https://raw.githubusercontent.com/gregoiresgt/payment-icons/master/Assets/Payment/Stripe/Stripe-card-dark@2x.png" width="250">](https://donate.stripe.com/dR63fk8ys7OF1k4eUU)
+>
+> Crypto:
+> 
+> Bitcoin - bc1q6nyc02nsj0fjl3vghr5ujft0qg5y00lr5e865k
+> 
+> Etherium - 0x2cFA49693302974B2afe874d537CE7CA159a847f
 
 ## Features:
 - AimBot
