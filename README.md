@@ -12,6 +12,8 @@ It will always be available for free, with the source code included. All feature
 > We will be thankful! All Donations will be spread evenly among developers.
 > 
 > [<img src="https://raw.githubusercontent.com/aha999/DonateButtons/master/Paypal.png" width="250">](https://www.paypal.com/ncp/payment/M3V7Q3Q295AHW)
+>
+> [<img src="https://raw.githubusercontent.com/gregoiresgt/payment-icons/master/Assets/Payment/Stripe/Stripe-card-dark@2x.png" width="250">](https://donate.stripe.com/dR63fk8ys7OF1k4eUU)
 
 ## Features:
 - AimBot
