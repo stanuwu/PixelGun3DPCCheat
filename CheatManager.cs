@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using BepInEx.Logging;
+using HarmonyLib;
 using PixelGunCheat.modules.impl.arbitrary;
 using PixelGunCheat.modules.impl.weapon;
 using PixelGunCheat.modules.impl.entity;
+using PixelGunCheat.modules.impl.patcher;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using Logger = BepInEx.Logging.Logger;
 using Renderer = PixelGunCheat.util.Renderer;
 
@@ -36,7 +37,8 @@ namespace PixelGunCheat
         private readonly CheatModuleCoinGenerator _modCoinGenerator = new(KeyCode.None);
         private readonly CheatModuleUberCharge _modUberCharge = new(KeyCode.None);
         private readonly CheatModuleFly _modFly = new(KeyCode.None);
-        
+        private readonly CheatModuleRapidFire _modRapidFire = new(KeyCode.None);
+
         // "Buttons"
         private readonly CheatModuleSkipLoading _modSkipLoading = new(KeyCode.None);
 
@@ -57,7 +59,7 @@ namespace PixelGunCheat
         {
             Debug.Log("Loaded Cheat");
             gameObject.hideFlags = HideFlags.HideAndDontSave;
-            _modHud.registerModules(_modNoRecoil, _modAllFullAuto, _modUberCharge, _modInfRange, _modAimUtils, _modScoreModif, _modCoinDrop, _modIceSwordAura, _modAOEBullet, _modForceCrit, _modInfAmmoV2, _modEffectSpam, _modDropTeleport, _modSpeed, _modAimBot, _modEsp, _modMotionBlur, _modInvis, _modAutoHeal, _modGemGenerator, _modCoinGenerator, _modFly, _modSkipLoading);
+            _modHud.registerModules(_modNoRecoil, _modAllFullAuto, _modUberCharge, _modInfRange, _modAimUtils, _modIceSwordAura, _modAOEBullet, _modForceCrit, _modInfAmmoV2, _modEffectSpam, _modDropTeleport, _modSpeed, _modAimBot, _modEsp, _modMotionBlur, _modInvis, _modAutoHeal, _modGemGenerator, _modCoinGenerator, _modFly, _modSkipLoading, _modRapidFire);
         }
 
         private void OnDestroy()
@@ -68,6 +70,9 @@ namespace PixelGunCheat
         private void Update()
         {
             tickCount++;
+            
+            // do none see none
+            _modRapidFire.HandleCheat();
             
             if (tickCount % 60 == 0)
             {
