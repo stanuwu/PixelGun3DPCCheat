@@ -34,6 +34,7 @@ public class CheatModuleAimBot : CheatModuleArbitrary
         
         foreach (var p in playerList)
         {
+            if(p.nickLabel == null) continue;
             if(p.nickLabel.text == "1111") continue;
             if(!(p.nickLabel.color.r == 1 && p.nickLabel.color.g == 0 && p.nickLabel.color.b == 0)) continue;
             if(!PlayerUtil.IsVisible(PlayerUtil.WorldToScreenPoint(main, p.transform.position))) continue;

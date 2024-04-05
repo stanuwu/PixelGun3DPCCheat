@@ -71,7 +71,7 @@ namespace PixelGunCheat
             
             if (tickCount % 60 == 0)
             {
-                main = Camera.main;
+                main = Camera.allCameras.ToList().Find(camera => camera.enabled);
                 if (main == null) return;
                 gameController = FindObjectOfType<GameController>();
                 playerList = FindObjectsOfType<Player_move_c>().ToList();

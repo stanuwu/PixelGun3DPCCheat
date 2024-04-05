@@ -35,6 +35,7 @@ namespace PixelGunCheat.modules.impl.arbitrary
             {
                 try
                 {
+                    if (playerMoveC.nickLabel == null) continue;
                     if (playerMoveC == null) continue;
                     if (playerMoveC.nickLabel.text == "1111") continue;
                     Vector3 position = playerMoveC.transform.position;
