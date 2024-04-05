@@ -10,10 +10,12 @@ namespace PixelGunCheat.modules.impl.arbitrary
         private bool _downDown = false;
         private bool _upDown = false;
         private bool _rightDown = false;
+        private bool _leftDown = false;
         
         private ICheatModule[] modules;
         private int selected = 0;
         private float maxY;
+        private bool open = true;
 
         private HSVColor _gay = HSVColor.FromRGB(1, 0, 1);
         public CheatModuleHud(Key k) : base(k)
@@ -74,6 +76,27 @@ namespace PixelGunCheat.modules.impl.arbitrary
             else
             {
                 _rightDown = false;
+            }
+            
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                if (!_leftDown)
+                {
+                    _leftDown = true;
+                    open = !open;
+                }
+            }
+            else
+            {
+                _leftDown = false;
+            }
+
+            if (!open)
+            {
+                Renderer.SetFontSize(Renderer.ScaleValInt(24));
+                Renderer.DrawSquare(new Vector2(20, 22), new Vector2(Renderer.ScaleValInt(280), Renderer.ScaleValInt(30)), new Color(0, 0,0, 0.75f));
+                Renderer.DrawStringShadow(new Vector2(25, 23), "Left Arrow - Open Menu", _gay.AsARGB(1), false);
+                return;
             }
             
             Renderer.SetFontSize(Renderer.ScaleValInt(32));
