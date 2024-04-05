@@ -41,6 +41,7 @@ namespace PixelGunCheat
 
         private List<Player_move_c> playerList = new();
         private long tickCount = 0;
+        private long fixedTickCount = 0;
         private GameController gameController;
         private Player_move_c player;
         private bool _initMat = false;
@@ -134,16 +135,7 @@ namespace PixelGunCheat
                 // Gives Target All Effects (or at least tries to)
                 _modEffectSpam.HandleCheat(weaponSounds);
             }
-            
-            if (tickCount % 30 == 0)
-            {
-                // Currency Generator
-                _modGemGenerator.HandleCheat(player);
-                _modCoinGenerator.HandleCheat(player);
-                // Drop TP
-                _modDropTeleport.HandleCheat(player);
-            }
-            
+
             // Invisibility
             _modInvis.HandleCheat(player);
             
@@ -171,8 +163,24 @@ namespace PixelGunCheat
         
         private void FixedUpdate()
         {
-            // Speed Hack
+            fixedTickCount++;
+            
             if (player == null) return;
+
+            if (fixedTickCount % 25 == 0)
+            {
+                // Drop TP
+                _modDropTeleport.HandleCheat(player);
+            }
+            
+            if (fixedTickCount % 100 == 0)
+            {
+                // Currency Generator
+                _modGemGenerator.HandleCheat(player);
+                _modCoinGenerator.HandleCheat(player);
+            }
+            
+            // Speed Hack
             _modSpeed.HandleCheat(player);
         }
     }
