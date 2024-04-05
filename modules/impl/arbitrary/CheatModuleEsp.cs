@@ -31,7 +31,10 @@ namespace PixelGunCheat.modules.impl.arbitrary
             if (!IsEnabled()) return;
             if (main == null) return;
             if (playerList.Count < 1) return;
-            foreach (var playerMoveC in playerList.OrderByDescending(p => Vector3.Distance(p.transform.position, main.transform.position)))
+            foreach (var playerMoveC in playerList.OrderByDescending(p => {
+                         if (p == null) return 0;
+                         return Vector3.Distance(p.transform.position, main.transform.position);
+                     }))
             {
                 try
                 {
@@ -40,6 +43,7 @@ namespace PixelGunCheat.modules.impl.arbitrary
                     if (playerMoveC.nickLabel.text == "1111") continue;
                     Vector3 position = playerMoveC.transform.position;
                     Vector3 topWorld = position + new Vector3(0, 2, 0);
+                    
 
                     Vector3 screenPos = PlayerUtil.WorldToScreenPoint(main, position);
                     Vector3 topScreen = PlayerUtil.WorldToScreenPoint(main, topWorld);
