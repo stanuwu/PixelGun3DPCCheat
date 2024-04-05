@@ -15,6 +15,7 @@ public class CheatModuleUberCharge : CheatModuleWeapon
 
     public override void HandleCheat(WeaponSounds t)
     {
+        if (!IsEnabled()) return;
         t.chargeLoop = true;
         t.chargeMax = 0;
         t.chargeTime = 0f;

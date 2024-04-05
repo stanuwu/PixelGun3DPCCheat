@@ -22,7 +22,7 @@ namespace PixelGunCheat
         private readonly CheatModuleIceSwordGlobalAura _modIceSwordAura = new(Key.None);
         private readonly CheatModuleAOEBullets _modAOEBullet = new(Key.None);
         private readonly CheatModuleForceCriticals _modForceCrit = new(Key.None);
-        private readonly CheatModuleInfiniteAmmo _modInfAmmo = new(Key.None);
+        private readonly CheatModuleInfiniteAmmoV2 _modInfAmmoV2 = new(Key.None);
         private readonly CheatModuleForceCancer _modEffectSpam = new(Key.None);
         private readonly CheatModuleDropTeleport _modDropTeleport = new(Key.None);
         private readonly CheatModuleInvisibility _modInvis = new(Key.None);
@@ -52,7 +52,7 @@ namespace PixelGunCheat
         {
             Debug.Log("Loaded Cheat");
             gameObject.hideFlags = HideFlags.HideAndDontSave;
-            _modHud.registerModules(_modNoRecoil, _modAllFullAuto, _modUberCharge, _modInfRange, _modAimUtils, _modScoreModif, _modCoinDrop, _modIceSwordAura, _modAOEBullet, _modForceCrit, _modInfAmmo, _modEffectSpam, _modDropTeleport, _modSpeed, _modAimBot, _modEsp, _modMotionBlur, _modInvis, _modAutoHeal, _modGemGenerator, _modCoinGenerator);
+            _modHud.registerModules(_modNoRecoil, _modAllFullAuto, _modUberCharge, _modInfRange, _modAimUtils, _modScoreModif, _modCoinDrop, _modIceSwordAura, _modAOEBullet, _modForceCrit, _modInfAmmoV2, _modEffectSpam, _modDropTeleport, _modSpeed, _modAimBot, _modEsp, _modMotionBlur, _modInvis, _modAutoHeal, _modGemGenerator, _modCoinGenerator);
         }
 
         private void OnDestroy()
@@ -125,12 +125,6 @@ namespace PixelGunCheat
                 
                 // Coin Generator
                 _modCoinDrop.HandleCheat(weaponSounds);
-
-                // Unlimited Ammo
-                _modInfAmmo.HandleCheat(weaponSounds);
-                
-                // Unlimited Ammo
-                _modInfAmmo.HandleCheat(weaponSounds);
                 
                 // Gives Target All Effects (or at least tries to)
                 _modEffectSpam.HandleCheat(weaponSounds);
@@ -141,6 +135,9 @@ namespace PixelGunCheat
             
             // Auto Heal Player When Possible
             _modAutoHeal.HandleCheat(player);
+            
+            // Infinite Ammo V2
+            _modInfAmmoV2.HandleCheat(player);
             
             // Aim Bot
             _modAimBot.HandleCheat();
