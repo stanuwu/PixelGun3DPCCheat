@@ -57,7 +57,7 @@ namespace PixelGunCheat
         {
             Debug.Log("Loaded Cheat");
             gameObject.hideFlags = HideFlags.HideAndDontSave;
-            _modHud.registerModules(_modNoRecoil, _modAllFullAuto, _modUberCharge, _modInfRange, _modAimUtils, _modScoreModif, _modCoinDrop, _modIceSwordAura, _modAOEBullet, _modForceCrit, _modInfAmmoV2, _modEffectSpam, _modDropTeleport, _modSpeed, _modAimBot, _modEsp, _modMotionBlur, _modInvis, _modAutoHeal, _modGemGenerator, _modCoinGenerator, _modFly, _modSkipLoading);
+            _modHud.registerModules(_modNoRecoil, _modAllFullAuto, _modUberCharge, _modInfRange, _modAimUtils, _modScoreModif, _modCoinDrop, _modIceSwordAura, _modAOEBullet, _modForceCrit, _modInfAmmoV2, _modEffectSpam, _modDropTeleport, _modSpeed, _modAimBot, _modEsp, _modMotionBlur, _modInvis, _modAutoHeal, _modFly, _modSkipLoading);
         }
 
         private void OnDestroy()
@@ -158,9 +158,12 @@ namespace PixelGunCheat
 
             _modHud.HandleCheat();
             
-            _modEsp.HandleCheat();            
+            _modEsp.HandleCheat();
 
-            _modAimBot.DrawTargetMarker(main);
+            if (main != null)
+            {
+                _modAimBot.DrawTargetMarker(main);
+            }
         }
         
         private void FixedUpdate()
@@ -178,7 +181,7 @@ namespace PixelGunCheat
             if (fixedTickCount % 25 == 0)
             {
                 // Drop TP
-                _modDropTeleport.HandleCheat(player); ;
+                _modDropTeleport.HandleCheat(player);
             }
             
             if (_modGemGenerator.IsEnabled() && _modGemGenerator.IsEnabled())
