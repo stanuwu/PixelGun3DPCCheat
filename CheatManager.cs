@@ -36,6 +36,9 @@ namespace PixelGunCheat
         private readonly CheatModuleCoinGenerator _modCoinGenerator = new(Key.None);
         private readonly CheatModuleUberCharge _modUberCharge = new(Key.None);
         private readonly CheatModuleFly _modFly = new(Key.None);
+        
+        // "Buttons"
+        private readonly CheatModuleSkipLoading _modSkipLoading = new(Key.None);
 
         private readonly CheatModuleHud _modHud = new(Key.None);
         
@@ -54,7 +57,7 @@ namespace PixelGunCheat
         {
             Debug.Log("Loaded Cheat");
             gameObject.hideFlags = HideFlags.HideAndDontSave;
-            _modHud.registerModules(_modNoRecoil, _modAllFullAuto, _modUberCharge, _modInfRange, _modAimUtils, _modScoreModif, _modCoinDrop, _modIceSwordAura, _modAOEBullet, _modForceCrit, _modInfAmmoV2, _modEffectSpam, _modDropTeleport, _modSpeed, _modAimBot, _modEsp, _modMotionBlur, _modInvis, _modAutoHeal, _modGemGenerator, _modCoinGenerator, _modFly);
+            _modHud.registerModules(_modNoRecoil, _modAllFullAuto, _modUberCharge, _modInfRange, _modAimUtils, _modScoreModif, _modCoinDrop, _modIceSwordAura, _modAOEBullet, _modForceCrit, _modInfAmmoV2, _modEffectSpam, _modDropTeleport, _modSpeed, _modAimBot, _modEsp, _modMotionBlur, _modInvis, _modAutoHeal, _modGemGenerator, _modCoinGenerator, _modFly, _modSkipLoading);
         }
 
         private void OnDestroy()
@@ -164,12 +167,18 @@ namespace PixelGunCheat
         {
             fixedTickCount++;
             
+            if (fixedTickCount % 25 == 0)
+            {
+                // Skip Loading
+                _modSkipLoading.HandleCheat();
+            }
+            
             if (player == null) return;
 
             if (fixedTickCount % 25 == 0)
             {
                 // Drop TP
-                _modDropTeleport.HandleCheat(player);
+                _modDropTeleport.HandleCheat(player); ;
             }
             
             if (fixedTickCount % 100 == 0)
