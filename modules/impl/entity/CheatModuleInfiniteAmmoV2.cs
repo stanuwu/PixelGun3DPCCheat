@@ -4,7 +4,7 @@ namespace PixelGunCheat.modules.impl.entity;
 
 public class CheatModuleInfiniteAmmoV2 : CheatModuleEntity
 {
-    public CheatModuleInfiniteAmmoV2(Key k) : base(k)
+    public CheatModuleInfiniteAmmoV2(Key k) : base(k, true)
     {
     }
 
