@@ -160,7 +160,7 @@ namespace PixelGunCheat
             
             _modEsp.HandleCheat();            
 
-            _modAimBot.DrawTargetMarker();
+            _modAimBot.DrawTargetMarker(main);
         }
         
         private void FixedUpdate()

@@ -94,10 +94,9 @@ public class CheatModuleAimBot : CheatModuleArbitrary
         this.main = main;
     }
 
-    public void DrawTargetMarker()
+    public void DrawTargetMarker(Camera main)
     {
         if (!IsEnabled()) return;
-        var main = Camera.main;
         if (main == null || aimedPos == Vector3.zero) return;
         Vector3 ap = PlayerUtil.WorldToScreenPoint(main, aimedPos);
         Renderer.DrawCenteredBoxShadow(ap, new Vector2(50, 50), Color.magenta, 2);
