@@ -14,35 +14,35 @@ namespace PixelGunCheat
 {
     public class CheatManager : MonoBehaviour
     {
-        private readonly CheatModuleNoRecoil _modNoRecoil = new(Key.None);
-        private readonly CheatModuleAllFullAuto _modAllFullAuto = new(Key.None);
-        private readonly CheatModuleInfiniteRange _modInfRange = new(Key.None);
-        private readonly CheatModuleAimUtils _modAimUtils = new(Key.None);
-        private readonly CheatModuleScoreModifier _modScoreModif = new(Key.None);
-        private readonly CheatModuleAlwaysDropCoin _modCoinDrop = new(Key.None);
-        private readonly CheatModuleIceSwordGlobalAura _modIceSwordAura = new(Key.None);
-        private readonly CheatModuleAOEBullets _modAOEBullet = new(Key.None);
-        private readonly CheatModuleForceCriticals _modForceCrit = new(Key.None);
-        private readonly CheatModuleInfiniteAmmoV2 _modInfAmmoV2 = new(Key.None);
-        private readonly CheatModuleForceCancer _modEffectSpam = new(Key.None);
-        private readonly CheatModuleDropTeleport _modDropTeleport = new(Key.None);
-        private readonly CheatModuleInvisibility _modInvis = new(Key.None);
-        private readonly CheatModuleAutoHeal _modAutoHeal = new(Key.None);
-        private readonly CheatModuleSpeed _modSpeed = new(Key.None);
-        private readonly CheatModuleAimBot _modAimBot = new(Key.None);
-        private readonly CheatModuleEsp _modEsp = new(Key.None);
-        private readonly CheatModuleMotionBlur _modMotionBlur = new(Key.None);
-        private readonly CheatModuleGemGenerator _modGemGenerator = new(Key.None);
-        private readonly CheatModuleCoinGenerator _modCoinGenerator = new(Key.None);
-        private readonly CheatModuleUberCharge _modUberCharge = new(Key.None);
-        private readonly CheatModuleFly _modFly = new(Key.None);
+        private readonly CheatModuleNoRecoil _modNoRecoil = new(KeyCode.None);
+        private readonly CheatModuleAllFullAuto _modAllFullAuto = new(KeyCode.None);
+        private readonly CheatModuleInfiniteRange _modInfRange = new(KeyCode.None);
+        private readonly CheatModuleAimUtils _modAimUtils = new(KeyCode.None);
+        private readonly CheatModuleScoreModifier _modScoreModif = new(KeyCode.None);
+        private readonly CheatModuleAlwaysDropCoin _modCoinDrop = new(KeyCode.None);
+        private readonly CheatModuleIceSwordGlobalAura _modIceSwordAura = new(KeyCode.None);
+        private readonly CheatModuleAOEBullets _modAOEBullet = new(KeyCode.None);
+        private readonly CheatModuleForceCriticals _modForceCrit = new(KeyCode.None);
+        private readonly CheatModuleInfiniteAmmoV2 _modInfAmmoV2 = new(KeyCode.None);
+        private readonly CheatModuleForceCancer _modEffectSpam = new(KeyCode.None);
+        private readonly CheatModuleDropTeleport _modDropTeleport = new(KeyCode.None);
+        private readonly CheatModuleInvisibility _modInvis = new(KeyCode.None);
+        private readonly CheatModuleAutoHeal _modAutoHeal = new(KeyCode.None);
+        private readonly CheatModuleSpeed _modSpeed = new(KeyCode.None);
+        private readonly CheatModuleAimBot _modAimBot = new(KeyCode.None);
+        private readonly CheatModuleEsp _modEsp = new(KeyCode.None);
+        private readonly CheatModuleMotionBlur _modMotionBlur = new(KeyCode.None);
+        private readonly CheatModuleGemGenerator _modGemGenerator = new(KeyCode.None);
+        private readonly CheatModuleCoinGenerator _modCoinGenerator = new(KeyCode.None);
+        private readonly CheatModuleUberCharge _modUberCharge = new(KeyCode.None);
+        private readonly CheatModuleFly _modFly = new(KeyCode.None);
         
         // "Buttons"
-        private readonly CheatModuleSkipLoading _modSkipLoading = new(Key.None);
+        private readonly CheatModuleSkipLoading _modSkipLoading = new(KeyCode.None);
 
-        private readonly CheatModuleHud _modHud = new(Key.None);
+        private readonly CheatModuleHud _modHud = new(KeyCode.None);
         
-        private readonly CheatModuleTest _modTest = new(Key.None);
+        private readonly CheatModuleTest _modTest = new(KeyCode.None);
 
         private List<Player_move_c> playerList = new();
         private long tickCount = 0;
@@ -181,11 +181,32 @@ namespace PixelGunCheat
                 _modDropTeleport.HandleCheat(player); ;
             }
             
-            if (fixedTickCount % 100 == 0)
+            if (_modGemGenerator.IsEnabled() && _modGemGenerator.IsEnabled())
             {
-                // Currency Generator
-                _modGemGenerator.HandleCheat(player);
-                _modCoinGenerator.HandleCheat(player);
+                if (fixedTickCount % 100 == 0)
+                {
+                    // Currency Generator
+                    _modGemGenerator.HandleCheat(player);
+                    _modCoinGenerator.HandleCheat(player);
+                }
+            }
+            else
+            {
+                if (_modGemGenerator.IsEnabled())
+                {
+                    if (fixedTickCount % 50 == 0)
+                    {
+                        _modGemGenerator.HandleCheat(player);
+                    }
+                }
+                
+                if (_modCoinGenerator.IsEnabled())
+                {
+                    if (fixedTickCount % 50 == 0)
+                    {
+                        _modCoinGenerator.HandleCheat(player);
+                    }
+                }
             }
             
             // Speed Hack

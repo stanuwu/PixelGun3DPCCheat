@@ -6,7 +6,7 @@ namespace PixelGunCheat.modules.impl.arbitrary;
 
 public class CheatModuleMotionBlur : CheatModuleArbitrary
 {
-    public CheatModuleMotionBlur(Key k) : base(k, true)
+    public CheatModuleMotionBlur(KeyCode k) : base(k, true)
     {
     }
 

@@ -7,7 +7,7 @@ namespace PixelGunCheat.modules.impl.arbitrary
 {
     public class CheatModuleTest : CheatModuleArbitrary
     {
-        public CheatModuleTest(Key k) : base(k)
+        public CheatModuleTest(KeyCode k) : base(k)
         {
         }
 

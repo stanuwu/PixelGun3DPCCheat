@@ -13,7 +13,7 @@ public class CheatModuleAimBot : CheatModuleArbitrary
     private Vector3 aimedPos = Vector3.zero;
     private Camera main = null;
     
-    public CheatModuleAimBot(Key k) : base(k, true)
+    public CheatModuleAimBot(KeyCode k) : base(k, true)
     {
     }
 

@@ -1,10 +1,11 @@
-﻿using UnityEngine.InputSystem;
+﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace PixelGunCheat.modules.impl.entity;
 
 public class CheatModuleAutoHeal : CheatModuleEntity
 {
-    public CheatModuleAutoHeal(Key k) : base(k)
+    public CheatModuleAutoHeal(KeyCode k) : base(k)
     {
     }
 

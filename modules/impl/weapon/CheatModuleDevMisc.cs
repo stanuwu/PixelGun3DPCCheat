@@ -1,4 +1,5 @@
-﻿using UnityEngine.InputSystem;
+﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace PixelGunCheat.modules.impl.weapon;
 
@@ -7,7 +8,7 @@ namespace PixelGunCheat.modules.impl.weapon;
  */
 public class CheatModuleDevMisc : CheatModuleWeapon
 {
-    public CheatModuleDevMisc(Key k) : base(k)
+    public CheatModuleDevMisc(KeyCode k) : base(k)
     {
     }
 

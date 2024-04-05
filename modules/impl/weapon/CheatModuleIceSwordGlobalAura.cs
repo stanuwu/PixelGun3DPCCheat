@@ -1,10 +1,11 @@
-﻿using UnityEngine.InputSystem;
+﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace PixelGunCheat.modules.impl.weapon;
 
 public class CheatModuleIceSwordGlobalAura : CheatModuleWeapon
 {
-    public CheatModuleIceSwordGlobalAura(Key k) : base(k)
+    public CheatModuleIceSwordGlobalAura(KeyCode k) : base(k)
     {
     }
 

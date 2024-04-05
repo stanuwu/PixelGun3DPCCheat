@@ -6,7 +6,7 @@ namespace PixelGunCheat.modules;
 
 public abstract class CheatModuleArbitrary : CheatModule<GameObject>
 {
-    protected CheatModuleArbitrary(Key k, bool enabled = false) : base(k, enabled)
+    protected CheatModuleArbitrary(KeyCode k, bool enabled = false) : base(k, enabled)
     {
     }
 

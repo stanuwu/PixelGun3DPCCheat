@@ -18,7 +18,7 @@ namespace PixelGunCheat.modules.impl.arbitrary
         private bool open = true;
 
         private HSVColor _gay = HSVColor.FromRGB(1, 0, 1);
-        public CheatModuleHud(Key k) : base(k)
+        public CheatModuleHud(KeyCode k) : base(k)
         {
         }
 
@@ -89,6 +89,14 @@ namespace PixelGunCheat.modules.impl.arbitrary
             else
             {
                 _leftDown = false;
+            }
+
+            foreach (var module in modules)
+            {
+                if (Input.GetKeyDown(module.GetKey()))
+                {
+                    module.ToggleModule();
+                }
             }
 
             if (!open)

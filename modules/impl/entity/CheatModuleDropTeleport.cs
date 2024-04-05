@@ -11,7 +11,7 @@ namespace PixelGunCheat.modules.impl.entity
 {
     public class CheatModuleDropTeleport : CheatModuleEntity
     {
-        public CheatModuleDropTeleport(Key k) : base(k, true)
+        public CheatModuleDropTeleport(KeyCode k) : base(k, true)
         {
         }
 

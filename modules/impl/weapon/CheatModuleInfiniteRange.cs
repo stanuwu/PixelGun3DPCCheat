@@ -5,7 +5,7 @@ namespace PixelGunCheat.modules.impl.weapon;
 
 public class CheatModuleInfiniteRange : CheatModuleWeapon
 {
-    public CheatModuleInfiniteRange(Key k) : base(k, true)
+    public CheatModuleInfiniteRange(KeyCode k) : base(k, true)
     {
     }
 

@@ -6,7 +6,7 @@ namespace PixelGunCheat.modules.impl.arbitrary
 {
     public class CheatModuleSkipLoading : CheatModuleArbitrary
     {
-        public CheatModuleSkipLoading(Key k, bool enabled = false) : base(k, enabled)
+        public CheatModuleSkipLoading(KeyCode k, bool enabled = false) : base(k, enabled)
         {
         }
 

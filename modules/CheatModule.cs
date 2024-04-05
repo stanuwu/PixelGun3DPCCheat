@@ -1,11 +1,12 @@
 ﻿using Photon;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace PixelGunCheat.modules;
 
 public abstract class CheatModule<T> : ICheatModule
 {
-    protected CheatModule(Key k, bool enabled = false)
+    protected CheatModule(KeyCode k, bool enabled = false)
     {
         Keybind = k;
         Enabled = enabled;
@@ -22,9 +23,14 @@ public abstract class CheatModule<T> : ICheatModule
     }
 
     public abstract string GetName();
+    
+    public KeyCode GetKey()
+    {
+        return Keybind;
+    }
 
     public abstract void HandleCheat(T t);
     
-    private Key Keybind { get; set; }
+    private KeyCode Keybind { get; set; }
     private bool Enabled { get; set; }
 }

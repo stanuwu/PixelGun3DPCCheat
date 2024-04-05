@@ -1,10 +1,11 @@
-﻿using UnityEngine.InputSystem;
+﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace PixelGunCheat.modules.impl.weapon;
 
 public class CheatModuleAlwaysDropCoin : CheatModuleWeapon
 {
-    public CheatModuleAlwaysDropCoin(Key k) : base(k)
+    public CheatModuleAlwaysDropCoin(KeyCode k) : base(k)
     {
     }
 
