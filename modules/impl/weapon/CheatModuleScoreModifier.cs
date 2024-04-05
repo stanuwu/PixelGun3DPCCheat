@@ -1,10 +1,11 @@
-﻿using UnityEngine.InputSystem;
+﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace PixelGunCheat.modules.impl.weapon;
 
 public class CheatModuleScoreModifier : CheatModuleWeapon
 {
-    public CheatModuleScoreModifier(Key k) : base(k)
+    public CheatModuleScoreModifier(KeyCode k) : base(k)
     {
     }
 

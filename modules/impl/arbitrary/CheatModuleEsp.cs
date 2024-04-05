@@ -14,7 +14,7 @@ namespace PixelGunCheat.modules.impl.arbitrary
         private HSVColor _gay = HSVColor.FromRGB(1, 0, 0);
         private Camera main = null;
         
-        public CheatModuleEsp(Key k) : base(k, true)
+        public CheatModuleEsp(KeyCode k) : base(k, true)
         {
         }
 

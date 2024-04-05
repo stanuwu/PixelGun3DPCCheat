@@ -1,10 +1,10 @@
-﻿using UnityEngine.InputSystem;
+﻿using UnityEngine;
 
 namespace PixelGunCheat.modules.impl.entity;
 
 public class CheatModuleInfiniteAmmoV2 : CheatModuleEntity
 {
-    public CheatModuleInfiniteAmmoV2(Key k) : base(k, true)
+    public CheatModuleInfiniteAmmoV2(KeyCode k) : base(k, true)
     {
     }
 

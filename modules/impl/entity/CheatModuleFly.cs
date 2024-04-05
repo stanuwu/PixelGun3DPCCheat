@@ -5,7 +5,7 @@ namespace PixelGunCheat.modules.impl.entity
 {
     public class CheatModuleFly : CheatModuleEntity
     {
-        public CheatModuleFly(Key k, bool enabled = false) : base(k, enabled)
+        public CheatModuleFly(KeyCode k, bool enabled = false) : base(k, enabled)
         {
         }
 

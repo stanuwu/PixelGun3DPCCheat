@@ -6,7 +6,7 @@ namespace PixelGunCheat.modules.impl.entity
 {
     public class CheatModuleCoinGenerator : CheatModuleEntity
     {
-        public CheatModuleCoinGenerator(Key k) : base(k)
+        public CheatModuleCoinGenerator(KeyCode k) : base(k)
         {
         }
 

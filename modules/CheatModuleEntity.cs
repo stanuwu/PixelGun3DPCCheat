@@ -1,10 +1,11 @@
-﻿using UnityEngine.InputSystem;
+﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace PixelGunCheat.modules;
 
 public abstract class CheatModuleEntity : CheatModule<Player_move_c>
 {
-    protected CheatModuleEntity(Key k, bool enabled = false) : base(k, enabled)
+    protected CheatModuleEntity(KeyCode k, bool enabled = false) : base(k, enabled)
     {
     }
 

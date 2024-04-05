@@ -5,7 +5,7 @@ namespace PixelGunCheat.modules.impl.entity
 {
     public class CheatModuleSpeed : CheatModuleEntity
     {
-        public CheatModuleSpeed(Key k) : base(k)
+        public CheatModuleSpeed(KeyCode k) : base(k)
         {
         }
 

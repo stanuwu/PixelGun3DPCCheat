@@ -1,10 +1,11 @@
-﻿using UnityEngine.InputSystem;
+﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace PixelGunCheat.modules.impl.entity;
 
 public class CheatModuleInvisibility : CheatModuleEntity
 {
-    public CheatModuleInvisibility(Key k, bool enabled = false) : base(k, enabled)
+    public CheatModuleInvisibility(KeyCode k, bool enabled = false) : base(k, enabled)
     {
     }
 

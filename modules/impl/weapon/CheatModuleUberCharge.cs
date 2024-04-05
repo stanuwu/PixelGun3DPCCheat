@@ -1,10 +1,10 @@
-﻿using UnityEngine.InputSystem;
+﻿using UnityEngine;
 
 namespace PixelGunCheat.modules.impl.weapon;
 
 public class CheatModuleUberCharge : CheatModuleWeapon
 {
-    public CheatModuleUberCharge(Key k, bool enabled = false) : base(k, enabled)
+    public CheatModuleUberCharge(KeyCode k, bool enabled = false) : base(k, enabled)
     {
     }
 

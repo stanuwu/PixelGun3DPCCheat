@@ -1,10 +1,11 @@
-﻿using UnityEngine.InputSystem;
+﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace PixelGunCheat.modules.impl.weapon;
 
 public class CheatModuleForceCancer : CheatModuleWeapon
 {
-    public CheatModuleForceCancer(Key k) : base(k, true)
+    public CheatModuleForceCancer(KeyCode k) : base(k, true)
     {
     }
 
