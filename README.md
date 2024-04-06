@@ -39,7 +39,6 @@ It will always be available for free, with the source code included. All feature
 - InfiniteAmmo
 - Reach
 - NoRecoil (and spread)
-- ScoreMultiplier
 - Rapid Fire
 - InfiniteGemClaim
 
