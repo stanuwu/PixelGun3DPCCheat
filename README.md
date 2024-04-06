@@ -27,15 +27,12 @@ It will always be available for free, with the source code included. All feature
 - NoMotionBlur
 - AutoHeal
 - UberCharge (Instant charging for charged weapons)
-- CoinGenerator
 - DropTeleport
-- GemGenerator
 - Invisibility
 - Speed
 - AOEBullets
 - BetterADS (XRay and Instant ADS)
 - AllFullAuto
-- AlwaysDropCoin
 - DuPONT Chemical Scandal (Apply all negative status effects)
 - Criticals
 - IceSwordAura
@@ -43,6 +40,8 @@ It will always be available for free, with the source code included. All feature
 - Reach
 - NoRecoil (and spread)
 - ScoreMultiplier
+- Rapid Fire
+- InfiniteGemClaim
 
 Building (knowledge required):
 
