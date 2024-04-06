@@ -91,12 +91,6 @@ namespace PixelGunCheat
             // Test Module
             _modTest.HandleCheat();
 
-            // Motion Blur
-            if (tickCount % 600 == 0)
-            {
-                _modMotionBlur.HandleCheat();
-            }
-
             // Ammo and Reloads
             WeaponSounds weaponSounds = FindObjectsOfType<WeaponSounds>().ToList().Find(s =>
             {
