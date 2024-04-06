@@ -1,6 +1,8 @@
 ﻿
 using System;
 using HarmonyLib;
+using PGCompany;
+using Progress;
 using Rilisoft;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -21,7 +23,6 @@ namespace PixelGunCheat.modules.impl.arbitrary
 
         public override void HandleCheat(GameObject g = null)
         {
-
         }
     }
 }
