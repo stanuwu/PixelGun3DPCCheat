@@ -1,6 +1,5 @@
 ﻿using PixelGunCheat.util;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using Renderer = PixelGunCheat.util.Renderer;
 
 namespace PixelGunCheat.modules.impl.arbitrary
@@ -115,7 +114,7 @@ namespace PixelGunCheat.modules.impl.arbitrary
             Renderer.SetFontSize(Renderer.ScaleValInt(20));
             
             float height = maxY + Renderer.ScaleValInt(15);
-            Renderer.DrawSquare(new Vector2(20, 150 + Renderer.ScaleValInt(20)), new Vector2(Renderer.ScaleValFloat(300), height), new Color(0, 0,0, 0.75f));
+            Renderer.DrawSquare(new Vector2(20, 150 + Renderer.ScaleValInt(20)), new Vector2(Renderer.ScaleValFloat(350), height), new Color(0, 0,0, 0.75f));
             
             float offset = 150 + Renderer.ScaleValInt(35);
             int index = 0;
@@ -124,12 +123,19 @@ namespace PixelGunCheat.modules.impl.arbitrary
             {
                 var content = new GUIContent(module.GetName());
                 var size = Renderer.StringStyle.CalcSize(content);
-                Renderer.DrawStringShadow(new Vector2(28 + Renderer.ScaleValInt(19), offset), module.GetName(), module.IsEnabled() ? _gay.AsARGB(1) : Color.gray, false);
+                var keybind = new GUIContent("(" + module.GetKey() + ")");
+                var keybind_size = Renderer.StringStyle.CalcSize(keybind);
                 
                 if (index == selected)
                 {
                     Renderer.DrawStringShadow(new Vector2(28, offset), ">", Color.magenta, false);
-                    Renderer.DrawStringShadow(new Vector2(28 + size.x + Renderer.ScaleValInt(27), offset), "<", Color.magenta, false);
+                    Renderer.DrawStringShadow(new Vector2(28 + Renderer.ScaleValInt(19), offset), "(" + module.GetKey() + ")", Color.cyan, false);
+                    Renderer.DrawStringShadow(new Vector2(28 + keybind_size.x + Renderer.ScaleValInt(23), offset), module.GetName(), module.IsEnabled() ? _gay.AsARGB(1) : Color.gray, false);
+                }
+                else
+                {
+                    Renderer.DrawStringShadow(new Vector2(10 + Renderer.ScaleValInt(19), offset), "(" + module.GetKey() + ")", Color.cyan, false);
+                    Renderer.DrawStringShadow(new Vector2(10 + keybind_size.x + Renderer.ScaleValInt(23), offset), module.GetName(), module.IsEnabled() ? _gay.AsARGB(1) : Color.gray, false);
                 }
                 
                 offset += size.y;
