@@ -31,7 +31,6 @@ namespace PixelGunCheat
         private readonly CheatModuleSpeed _modSpeed = new(KeyCode.None);
         private readonly CheatModuleAimBot _modAimBot = new(KeyCode.None);
         private readonly CheatModuleEsp _modEsp = new(KeyCode.None);
-        private readonly CheatModuleMotionBlur _modMotionBlur = new(KeyCode.None);
         private readonly CheatModuleGemGenerator _modGemGenerator = new(KeyCode.None);
         private readonly CheatModuleCoinGenerator _modCoinGenerator = new(KeyCode.None);
         private readonly CheatModuleUberCharge _modUberCharge = new(KeyCode.None);
@@ -59,7 +58,7 @@ namespace PixelGunCheat
         {
             Debug.Log("Loaded Cheat");
             gameObject.hideFlags = HideFlags.HideAndDontSave;
-            _modHud.registerModules(_modNoRecoil, _modAllFullAuto, _modUberCharge, _modInfRange, _modAimUtils, _modIceSwordAura, _modAOEBullet, _modForceCrit, _modInfAmmoV2, _modEffectSpam, _modDropTeleport, _modSpeed, _modAimBot, _modEsp, _modMotionBlur, _modInvis, _modAutoHeal, _modFly, _modSkipLoading, _modRapidFire, _modInfiniteGemClaim);
+            _modHud.registerModules(_modNoRecoil, _modAllFullAuto, _modUberCharge, _modInfRange, _modAimUtils, _modIceSwordAura, _modAOEBullet, _modForceCrit, _modInfAmmoV2, _modEffectSpam, _modDropTeleport, _modSpeed, _modAimBot, _modEsp, _modInvis, _modAutoHeal, _modFly, _modSkipLoading, _modRapidFire, _modInfiniteGemClaim);
         }
 
         private void OnDestroy()
