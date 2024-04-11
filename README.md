@@ -4,7 +4,7 @@
 > This Program is FREE SOFTWARE.
 It will always be available for free, with the source code included. All features will be unlocked and there will be no requirements to obtain the program. If someone asks you to pay for this program or complete a task to obtain it you are getting scammed!
 
-## For help or install directions join our [discord](https://discord.gg/aNZ2nKrtAx).
+## For help or install directions join our [discord](https://discord.gg/wR8rqUUS2d).
 
 > ## Donations
 > We spent a lot of time working on this, and are releasing it for free.
