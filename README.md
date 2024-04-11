@@ -1,5 +1,7 @@
 # PixelGun3D PC Cheat
 
+(This Cheat is patched. We are working on a new version. Join the discord to stay up to date!)
+
 > ## Warning!
 > This Program is FREE SOFTWARE.
 It will always be available for free, with the source code included. All features will be unlocked and there will be no requirements to obtain the program. If someone asks you to pay for this program or complete a task to obtain it you are getting scammed!
