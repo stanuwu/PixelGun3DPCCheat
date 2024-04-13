@@ -1,6 +1,6 @@
 # PixelGun3D PC Cheat
 
-(This Cheat is patched. We are working on a new version. Join the discord to stay up to date!)
+## Patched! Look at this -> https://github.com/stanuwu/PixelGunCheatInternal
 
 > ## Warning!
 > This Program is FREE SOFTWARE.
