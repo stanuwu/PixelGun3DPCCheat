@@ -2,6 +2,9 @@
 
 # PixelGun3D PC Cheat
 
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=stanuwu/pixelgun3dpccheat@github)](https://gitads.dev/v1/ad-track?source=stanuwu/pixelgun3dpccheat@github)
+
 ## Patched! Look at this -> https://github.com/stanuwu/PixelGunCheatInternal
 
 > ## Warning!
